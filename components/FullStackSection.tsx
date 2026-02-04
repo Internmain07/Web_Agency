@@ -108,23 +108,23 @@ const FullStackSection: React.FC = () => {
                 <AnimatedInView className="text-center max-w-4xl mx-auto mb-20 relative z-10" delay={100}>
                     <h2 className="text-4xl font-medium tracking-tight text-slate-900 dark:text-white sm:text-5xl md:text-6xl">
                          <BlurText 
-                            text="Full-Stack" 
+                            text="Web Design &" 
                             className="inline-block"
                             delay={40}
                             animateBy="chars"
                          /> 
                          <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-sky-500 to-blue-600 dark:from-cyan-400 dark:via-sky-400 dark:to-blue-400 pb-2">
-                             Strategy & Architecture
+                             Development Services
                          </span>
                     </h2>
                     
                     <p className="mt-8 mx-auto max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-300 transition-colors">
-                        We don't just write code; we architect scalable digital ecosystems. From high-fidelity front-ends to resilient cloud infrastructures, we build the engine that drives your business growth.
+                        Expert web design agency delivering custom website development solutions. We build scalable, SEO-optimized websites with modern technologies like React, Next.js, and TypeScript for businesses ready to grow online.
                     </p>
                     
                     {/* Horizontal Pills List */}
                     <div className="mt-10 flex flex-wrap justify-center gap-4 animate-float-pills">
-                        {['Bespoke Enterprise Solutions', 'High-Conversion Digital Stores', 'Rapid Market-Ready MVPs'].map((item, i) => (
+                        {['Custom Website Design', 'E-commerce Development', 'SEO Optimization'].map((item, i) => (
                              <span 
                                 key={i} 
                                 className="inline-flex items-center gap-2 rounded-full bg-white/80 dark:bg-white/5 px-5 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-200 ring-1 ring-slate-200 dark:ring-white/10 backdrop-blur-md transition-all hover:bg-white hover:scale-105 hover:shadow-lg dark:hover:bg-white/10 hover:ring-cyan-400/50"
@@ -143,40 +143,40 @@ const FullStackSection: React.FC = () => {
                         icon="solar:magic-stick-3-linear"
                         iconBgClass="bg-cyan-100/50 dark:bg-cyan-900/30"
                         iconColorClass="text-cyan-600 dark:text-cyan-400"
-                        title="Conversion UI/UX"
+                        title="Professional UI/UX Design"
                         delay={200}
                     >
-                        High-fidelity interfaces that turn casual visitors into loyal customers through strategic, results-driven design.
+                        Beautiful, user-friendly interfaces that engage visitors and drive conversions through strategic, conversion-optimized web design.
                     </SpotlightCard>
                     
                     <SpotlightCard
                         icon="solar:cpu-bolt-linear"
                         iconBgClass="bg-sky-100/50 dark:bg-sky-900/30"
                         iconColorClass="text-sky-600 dark:text-sky-400"
-                        title="AI-Ready Scale"
+                        title="Scalable Architecture"
                         delay={300}
                     >
-                        Modular architecture that integrates AI workflows and scales effortlessly from local landing pages to global platforms.
+                        Future-proof web development with modern technologies. Build websites that grow with your business from startup to enterprise scale.
                     </SpotlightCard>
                     
                     <SpotlightCard
                         icon="solar:rocket-2-linear"
                         iconBgClass="bg-emerald-100/50 dark:bg-emerald-900/30"
                         iconColorClass="text-emerald-600 dark:text-emerald-400"
-                        title="Peak Performance"
+                        title="SEO & Performance"
                         delay={400}
                     >
-                        Dominating search rankings with perfect Lighthouse scores and near-instant load times for maximum engagement.
+                        Rank higher on Google with SEO-optimized websites. Lightning-fast load times and perfect performance scores guaranteed.
                     </SpotlightCard>
                     
                     <SpotlightCard
                         icon="solar:devices-linear"
                         iconBgClass="bg-teal-100/50 dark:bg-teal-900/30"
                         iconColorClass="text-teal-600 dark:text-teal-400"
-                        title="Mobile Accessibility"
+                        title="Responsive Web Design"
                         delay={500}
                     >
-                        Fluid responsiveness guaranteeing a flawless, high-performance experience on every device to boost universal reach.
+                        Mobile-first, responsive websites that look stunning on all devices. Reach your audience anywhere with perfect user experience.
                     </SpotlightCard>
                 </div>
             </div>

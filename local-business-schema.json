@@ -1,0 +1,272 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://i-intern.com/#localbusiness",
+  "name": "I-Intern Web Design Agency",
+  "alternateName": "I-Intern",
+  "description": "Professional web design and development agency offering custom website solutions, full-stack development, React & Next.js development, UI/UX design, and SEO optimization services for businesses worldwide.",
+  "url": "https://i-intern.com",
+  "telephone": "+91-XXX-XXX-XXXX",
+  "email": "contact@i-intern.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://i-intern.com/logo.png",
+    "width": 500,
+    "height": 500
+  },
+  "image": [
+    {
+      "@type": "ImageObject",
+      "url": "https://i-intern.com/og-image.jpg",
+      "width": 1200,
+      "height": 630
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Your Street Address",
+    "addressLocality": "Your City",
+    "addressRegion": "Your State",
+    "postalCode": "Your Postal Code",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "20.5937",
+    "longitude": "78.9629"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "priceRange": "$$",
+  "currenciesAccepted": "INR, USD",
+  "paymentAccepted": "Cash, Credit Card, Bank Transfer, Online Payment",
+  "areaServed": [
+    {
+      "@type": "Country",
+      "name": "India"
+    },
+    {
+      "@type": "Country",
+      "name": "United States"
+    },
+    {
+      "@type": "Country",
+      "name": "United Kingdom"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Worldwide"
+    }
+  ],
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": "20.5937",
+      "longitude": "78.9629"
+    },
+    "geoRadius": "20000"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Web Design and Development Services",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "Web Design Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Custom Website Design",
+              "description": "Bespoke website designs tailored to your brand identity and business goals"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Responsive Web Design",
+              "description": "Mobile-first, responsive designs that work perfectly on all devices"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "UI/UX Design",
+              "description": "User-centered interface design for optimal user experience and engagement"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Web Development Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Full Stack Development",
+              "description": "Complete web development from frontend to backend with modern technologies"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "React Development",
+              "description": "Single-page applications built with React and modern JavaScript"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Next.js Development",
+              "description": "Server-side rendered React applications for optimal performance and SEO"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "E-commerce Solutions",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "E-commerce Website Development",
+              "description": "Full-featured online stores with secure payment processing and inventory management"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Shopping Cart Integration",
+              "description": "Custom shopping cart solutions integrated with your existing platform"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Digital Marketing",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "SEO Optimization",
+              "description": "Search engine optimization to improve rankings and organic traffic"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Performance Optimization",
+              "description": "Website speed and performance optimization for better user experience"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Maintenance & Support",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Website Maintenance",
+              "description": "Ongoing website updates, security patches, and technical support"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "24/7 Technical Support",
+              "description": "Round-the-clock technical assistance and emergency support"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "50",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Sample Client Name"
+      },
+      "datePublished": "2026-01-15",
+      "reviewBody": "Excellent web design service! The team delivered a beautiful, fast, and SEO-optimized website that exceeded our expectations. Highly professional and responsive.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/i-intern",
+    "https://twitter.com/i-intern",
+    "https://www.linkedin.com/company/i-intern",
+    "https://github.com/i-intern",
+    "https://www.instagram.com/i-intern"
+  ],
+  "slogan": "High-end design shouldn't require a high-end headache",
+  "founder": {
+    "@type": "Person",
+    "name": "Founder Name"
+  },
+  "foundingDate": "2024",
+  "numberOfEmployees": {
+    "@type": "QuantitativeValue",
+    "value": "10-50"
+  },
+  "knowsAbout": [
+    "Web Design",
+    "Web Development",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "Full Stack Development",
+    "UI/UX Design",
+    "SEO",
+    "E-commerce",
+    "Responsive Design",
+    "Progressive Web Apps"
+  ],
+  "award": [
+    "Example Award 1",
+    "Example Award 2"
+  ]
+}

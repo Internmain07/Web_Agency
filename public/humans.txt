@@ -1,0 +1,30 @@
+# humanstxt.org
+# The humans responsible for creating this awesome web design agency website
+
+/* TEAM */
+Web Design & Development: I-Intern Team
+Site: https://i-intern.com
+Email: contact@i-intern.com
+Location: India
+
+/* THANKS */
+To all the open-source contributors and amazing developers in the web community
+
+/* SITE */
+Last update: 2026/02/04
+Standards: HTML5, CSS3, JavaScript ES6+, TypeScript
+Components: React 19, Vite, Tailwind CSS
+Software: VS Code, Figma, Git
+Technologies: Next.js, Node.js, TypeScript, React, Tailwind CSS, Supabase, Prisma, PostgreSQL
+
+/* SERVICES */
+- Custom Web Design
+- Full-Stack Development
+- E-commerce Solutions
+- UI/UX Design
+- SEO Optimization
+- Website Maintenance
+- React & Next.js Development
+- Progressive Web Apps
+- Mobile-Responsive Design
+- Performance Optimization

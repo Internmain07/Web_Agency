@@ -1,13 +1,6 @@
 
 import '../types';
 import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import AuroraBackground from './AuroraBackground';
-import ClickSpark from './ClickSpark';
-import CustomCursor from './CustomCursor';
-import ScrollToTop from './ScrollToTop';
-import { ThemeProvider } from '../context/ThemeContext';
 import AnimatedInView from './AnimatedInView';
 
 const TermsOfServiceContent: React.FC = () => {
@@ -70,26 +63,11 @@ const TermsOfServiceContent: React.FC = () => {
 
 
 function TermsOfServicePage() {
-  return (
-    <ThemeProvider>
-      <CustomCursor />
-      <ScrollToTop />
-      <ClickSpark
-        sparkColor='#fff'
-        sparkSize={10}
-        sparkRadius={15}
-        sparkCount={8}
-        duration={400}
-      >
-        <AuroraBackground />
-        <Header isPrivacyPage={true} />
+    return (
         <main className="relative z-10 pt-24">
-          <TermsOfServiceContent />
-          <Footer />
+            <TermsOfServiceContent />
         </main>
-      </ClickSpark>
-    </ThemeProvider>
-  );
+    );
 }
 
 export default TermsOfServicePage;

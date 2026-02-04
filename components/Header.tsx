@@ -1,5 +1,6 @@
 import '../types';
 import * as React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import AnimatedInView from './AnimatedInView';
 import { useTheme } from '../context/ThemeContext';
 
@@ -9,6 +10,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ isPrivacyPage = false }) => {
     const { theme, toggleTheme } = useTheme();
+        const location = useLocation();
     const [activeSection, setActiveSection] = React.useState('');
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
@@ -83,13 +85,25 @@ const Header: React.FC<HeaderProps> = ({ isPrivacyPage = false }) => {
                         
                         {/* Logo */}
                         <div className="flex items-center gap-3">
-                            <a href={isPrivacyPage ? "/" : "#"} className="flex items-center gap-2 group" onClick={handleLogoClick}>
-                                <div className="relative flex h-8 w-8 items-center justify-center overflow-hidden rounded-lg bg-slate-900 dark:bg-white text-white dark:text-black font-bold text-lg transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
-                                   <span className="relative z-10">I</span>
-                                   <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500 to-sky-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                </div>
-                                <span className="font-bold tracking-widest text-sm uppercase text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-300 transition-colors">I-INTERN</span>
-                            </a>
+                            {location.pathname === '/' ? (
+                                <a href="#" className="flex items-center gap-2 group" onClick={handleLogoClick}>
+                                    <img 
+                                        src={theme === 'dark' ? '/logo/logo-white.png' : '/logo/logo-black.png'} 
+                                        alt="I-Intern Logo" 
+                                        className="h-8 w-auto transition-transform duration-300 group-hover:scale-110" 
+                                    />
+                                    <span className="font-bold tracking-widest text-sm uppercase text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-300 transition-colors">I-INTERN</span>
+                                </a>
+                            ) : (
+                                <Link to="/" className="flex items-center gap-2 group">
+                                    <img 
+                                        src={theme === 'dark' ? '/logo/logo-white.png' : '/logo/logo-black.png'} 
+                                        alt="I-Intern Logo" 
+                                        className="h-8 w-auto transition-transform duration-300 group-hover:scale-110" 
+                                    />
+                                    <span className="font-bold tracking-widest text-sm uppercase text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-300 transition-colors">I-INTERN</span>
+                                </Link>
+                            )}
                         </div>
 
                         {/* Desktop Navigation */}

@@ -1,5 +1,6 @@
 import '../types';
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import AnimatedInView from './AnimatedInView';
 
 const Footer: React.FC = () => {
@@ -13,13 +14,17 @@ const Footer: React.FC = () => {
                 </div>
                 <div className="relative mx-auto flex flex-col items-center justify-center px-8 pt-16 pb-16 text-center sm:py-16 md:px-8">
                     <div className="w-full max-w-7xl">
-                        <div className="grid grid-cols-1 gap-12 border-b border-slate-200 dark:border-white/10 pb-12 md:grid-cols-2 lg:grid-cols-5 transition-colors">
+                        <div className="grid grid-cols-1 gap-12 border-b border-slate-200 dark:border-white/10 pb-12 md:grid-cols-2 lg:grid-cols-4 transition-colors">
                             <div className="lg:col-span-2">
                                 <div className="flex flex-col items-start">
-                                    <a href="/" className="flex items-center gap-2 text-slate-900 dark:text-white mb-4" aria-label="Go to I-Intern homepage">
-                                        <div className="flex h-6 w-6 items-center justify-center rounded bg-slate-900 dark:bg-white text-white dark:text-black font-bold text-sm transition-colors">I</div>
+                                        <Link to="/" className="flex items-center gap-2 text-slate-900 dark:text-white mb-4" aria-label="Go to I-Intern homepage">
+                                        <img 
+                                            src={typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches ? '/logo/logo-white.png' : '/logo/logo-black.png'} 
+                                            alt="I-Intern Logo" 
+                                            className="h-6 w-auto" 
+                                        />
                                         <span className="font-bold tracking-widest text-sm uppercase">I-INTERN</span>
-                                    </a>
+                                        </Link>
                                     <p className="mb-6 text-left text-sm leading-relaxed text-slate-600 dark:text-zinc-400 transition-colors">Designing the future, one pixel at a time. We build brands that inspire and websites that convert.</p>
                                     <div className="flex items-center gap-3">
                                         <a href="https://twitter.com/i_intern_agency" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter" className="group flex h-9 w-9 items-center justify-center rounded-lg bg-slate-200 dark:bg-white/5 text-slate-500 dark:text-zinc-300 ring-1 ring-slate-300 dark:ring-white/10 transition hover:bg-slate-300 dark:hover:bg-white/10">
@@ -34,38 +39,17 @@ const Footer: React.FC = () => {
                             <div className="text-left">
                                 <h4 className="mb-4 text-sm font-semibold tracking-tight text-slate-900 dark:text-white transition-colors">Services</h4>
                                 <ul className="space-y-3">
-                                    <li><a href="/#services" className="text-sm text-slate-600 dark:text-zinc-400 transition hover:text-slate-900 dark:hover:text-white" aria-label="Learn about our Web Design services">Web Design</a></li>
-                                    <li><a href="/#services" className="text-sm text-slate-600 dark:text-zinc-400 transition hover:text-slate-900 dark:hover:text-white" aria-label="Learn about our Development services">Development</a></li>
-                                    <li><a href="/#services" className="text-sm text-slate-600 dark:text-zinc-400 transition hover:text-slate-900 dark:hover:text-white" aria-label="Learn about our SEO services">SEO & Marketing</a></li>
-                                    <li><a href="/#services" className="text-sm text-slate-600 dark:text-zinc-400 transition hover:text-slate-900 dark:hover:text-white" aria-label="Learn about our Branding services">Branding</a></li>
-                                </ul>
-                            </div>
-                            <div className="text-left">
-                                <h4 className="mb-4 text-sm font-semibold tracking-tight text-slate-900 dark:text-white transition-colors">Company</h4>
-                                <ul className="space-y-3">
-                                    <li><a href="/#faq" className="text-sm text-slate-600 dark:text-zinc-400 transition hover:text-slate-900 dark:hover:text-white" aria-label="Read about us">About Us</a></li>
-                                    <li><a href="#contact" className="text-sm text-slate-600 dark:text-zinc-400 transition hover:text-slate-900 dark:hover:text-white" aria-label="View our careers">Careers</a></li>
-                                    <li><a href="#contact" className="text-sm text-slate-600 dark:text-zinc-400 transition hover:text-slate-900 dark:hover:text-white" aria-label="Read our blog">Blog</a></li>
-                                    <li><a href="#contact" className="text-sm text-slate-600 dark:text-zinc-400 transition hover:text-slate-900 dark:hover:text-white" aria-label="Contact us">Contact</a></li>
-                                </ul>
-                            </div>
-                            <div className="text-left">
-                                <h4 className="mb-4 text-sm font-semibold tracking-tight text-slate-900 dark:text-white transition-colors">Legal</h4>
-                                <ul className="space-y-3">
-                                    <li><a href="/privacy.html" className="text-sm text-slate-600 dark:text-zinc-400 transition hover:text-slate-900 dark:hover:text-white" aria-label="View Privacy Policy">Privacy Policy</a></li>
-                                    <li><a href="/terms.html" className="text-sm text-slate-600 dark:text-zinc-400 transition hover:text-slate-900 dark:hover:text-white" aria-label="View Terms of Service">Terms of Service</a></li>
-                                    <li><a href="#" className="text-sm text-slate-600 dark:text-zinc-400 transition hover:text-slate-900 dark:hover:text-white" aria-label="View Cookie Policy">Cookie Policy</a></li>
+                                    <li><span className="text-sm text-slate-600 dark:text-zinc-400 transition-colors hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-600 hover:to-sky-600 dark:hover:from-cyan-400 dark:hover:to-sky-400 cursor-default">Web Design</span></li>
+                                    <li><span className="text-sm text-slate-600 dark:text-zinc-400 transition-colors hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-600 hover:to-sky-600 dark:hover:from-cyan-400 dark:hover:to-sky-400 cursor-default">Development</span></li>
+                                    <li><span className="text-sm text-slate-600 dark:text-zinc-400 transition-colors hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-600 hover:to-sky-600 dark:hover:from-cyan-400 dark:hover:to-sky-400 cursor-default">SEO & Marketing</span></li>
+                                    <li><span className="text-sm text-slate-600 dark:text-zinc-400 transition-colors hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-600 hover:to-sky-600 dark:hover:from-cyan-400 dark:hover:to-sky-400 cursor-default">Branding</span></li>
                                 </ul>
                             </div>
                         </div>
-                        <div className="pt-8 flex flex-col items-center justify-between gap-4 md:flex-row">
+                        <div className="pt-8 flex flex-col items-center justify-center">
                              <p className="text-sm text-slate-500">
                                 &copy; {new Date().getFullYear()} I-Intern Technologies Private Limited. All rights reserved.
                             </p>
-                            <div className="flex items-center gap-6">
-                                <a href="/privacy.html" className="text-sm text-slate-500 hover:text-slate-900 dark:hover:text-white transition">Privacy</a>
-                                <a href="/terms.html" className="text-sm text-slate-500 hover:text-slate-900 dark:hover:text-white transition">Terms</a>
-                            </div>
                         </div>
                     </div>
                 </div>

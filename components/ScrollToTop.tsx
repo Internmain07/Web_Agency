@@ -1,19 +1,23 @@
 import '../types';
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const ScrollToTop: React.FC = () => {
+  const { pathname } = useLocation();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      setIsVisible(window.pageYOffset > 300);
     };
 
     window.addEventListener('scroll', toggleVisibility);
+    toggleVisibility();
+
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
@@ -24,18 +28,19 @@ const ScrollToTop: React.FC = () => {
     });
   };
 
+  if (!isVisible) return null;
+
   return (
     <button
-        onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-white/80 dark:bg-slate-800/80 backdrop-blur border border-slate-200 dark:border-white/10 shadow-lg shadow-cyan-500/10 text-slate-900 dark:text-white transition-all duration-500 ease-out hover:scale-110 hover:bg-cyan-50 dark:hover:bg-cyan-900/30 hover:border-cyan-200 dark:hover:border-cyan-500/30 group ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
-        }`}
-        aria-label="Scroll to top"
+      type="button"
+      onClick={scrollToTop}
+      aria-label="Scroll to top"
+      className="group fixed bottom-6 right-6 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-white/90 text-slate-700 shadow-lg ring-1 ring-slate-200 backdrop-blur transition hover:-translate-y-0.5 hover:bg-white dark:bg-neutral-900/90 dark:text-slate-200 dark:ring-white/10"
     >
-        <iconify-icon 
-            icon="solar:alt-arrow-up-linear" 
-            className="text-xl transition-transform duration-300 group-hover:-translate-y-0.5"
-        ></iconify-icon>
+      <iconify-icon
+        icon="solar:alt-arrow-up-linear"
+        className="text-xl transition-transform duration-300 group-hover:-translate-y-0.5"
+      ></iconify-icon>
     </button>
   );
 };

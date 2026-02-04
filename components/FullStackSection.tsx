@@ -28,7 +28,7 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({ icon, iconBgClass, iconCo
     const handleMouseLeave = () => setOpacity(0);
 
     return (
-        <AnimatedInView delay={delay} className="h-full">
+        <AnimatedInView delay={delay} className="h-full" animationType={delay % 200 === 0 ? 'fade-left' : delay % 150 === 0 ? 'fade-right' : 'zoom-in'}>
             <div
                 ref={divRef}
                 onMouseMove={handleMouseMove}

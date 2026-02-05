@@ -29,6 +29,53 @@ export default defineConfig(({ command }) => {
       host: '0.0.0.0',
     },
     plugins,
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: (id) => {
+            // Vendor chunks
+            if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
+              return 'vendor-react';
+            }
+            if (id.includes('node_modules/react-router-dom')) {
+              return 'vendor-router';
+            }
+            if (id.includes('node_modules/react-icons')) {
+              return 'vendor-icons';
+            }
+            // Feature-based chunks - lazy loaded pages go into separate chunks
+            if (id.includes('AboutPage') || id.includes('ResourcesPage') || id.includes('CareersPage')) {
+              return 'chunk-pages-main';
+            }
+            if (id.includes('PrivacyPolicyPage') || id.includes('TermsOfServicePage')) {
+              return 'chunk-pages-legal';
+            }
+          },
+          chunkFileNames: 'js/[name]-[hash].js',
+          entryFileNames: 'js/[name]-[hash].js',
+          assetFileNames: ({ name }) => {
+            if (/\.(gif|jpe?g|png|svg)$/.test(name ?? '')) {
+              return 'images/[name]-[hash][extname]';
+            } else if (/\.css$/.test(name ?? '')) {
+              return 'css/[name]-[hash][extname]';
+            }
+            return 'assets/[name]-[hash][extname]';
+          },
+        },
+      },
+      // Minify more aggressively
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          drop_console: true,
+          drop_debugger: true,
+        },
+      },
+      // Split vendor code
+      cssCodeSplit: true,
+      sourcemap: false, // Disable for production
+      reportCompressedSize: true,
+    },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),

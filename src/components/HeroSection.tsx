@@ -25,6 +25,8 @@ const techLogos: ReactNodeLogo[] = [
   { node: <SiGithub />, title: "GitHub", href: "https://github.com" },
 ];
 
+// Lazy load meteors only when needed
+const LazyMeteors = React.lazy(() => Promise.resolve({ default: () => <Meteors number={40} /> }));
 
 const HeroSection: React.FC = () => {
     const scrollToContact = (e: React.MouseEvent) => {
@@ -49,7 +51,9 @@ const HeroSection: React.FC = () => {
                     
                     {/* Meteors Effect: Positioned absolutely to act as a background for the heading */}
                     <div className="absolute top-0 left-0 w-full h-[500px] overflow-hidden pointer-events-none z-0">
-                        <Meteors number={40} />
+                        <React.Suspense fallback={null}>
+                            <Meteors number={40} />
+                        </React.Suspense>
                     </div>
 
                     <div className="text-center relative z-10">

@@ -108,18 +108,18 @@ const FullStackSection: React.FC = () => {
                 <AnimatedInView className="text-center max-w-4xl mx-auto mb-20 relative z-10" delay={100}>
                     <h2 className="text-4xl font-medium tracking-tight text-slate-900 dark:text-white sm:text-5xl md:text-6xl">
                          <BlurText 
-                            text="Web Design &" 
+                            text="Design Development &" 
                             className="inline-block"
                             delay={40}
                             animateBy="chars"
                          /> 
                          <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-sky-500 to-blue-600 dark:from-cyan-400 dark:via-sky-400 dark:to-blue-400 pb-2">
-                             Development Services
+                             Custom Website Services
                          </span>
                     </h2>
                     
                     <p className="mt-8 mx-auto max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-300 transition-colors">
-                        Expert web design agency delivering custom website development solutions. We build scalable, SEO-optimized websites with modern technologies like React, Next.js, and TypeScript for businesses ready to grow online.
+                        We build expert web design development for custom website solutions. Our design development team delivers scalable, SEO-optimized websites with React, Next.js, and TypeScript technology for businesses ready to grow online.
                     </p>
                     
                     {/* Horizontal Pills List */}

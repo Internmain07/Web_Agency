@@ -39,6 +39,15 @@ const ContactSection: React.FC = () => {
                                     <p className="text-sm">9:00 AM - 6:00 PM (IST)</p>
                                 </div>
                             </div>
+                            <div className="flex items-start gap-4 group">
+                                <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-emerald-100/50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform duration-300 ring-1 ring-emerald-500/20">
+                                    <iconify-icon icon="solar:phone-linear" className="text-xl"></iconify-icon>
+                                </div>
+                                <div>
+                                    <h3 className="font-semibold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Phone</h3>
+                                    <p className="text-sm mt-0.5">+91 93456 96576</p>
+                                </div>
+                            </div>
                         </div>
                     </AnimatedInView>
 
@@ -128,12 +137,15 @@ const ContactSection: React.FC = () => {
 
                                         <input 
                                             type="tel" 
+                                            name="contact-number" 
+                                            id="contact-number" 
                                             name="phone" 
                                             id="phone" 
                                             placeholder=" "
                                             className="peer block w-full rounded-xl border-0 bg-slate-100/80 dark:bg-white/5 dark:focus:bg-neutral-900/90 pt-7 pb-3 px-4 text-slate-900 dark:text-white shadow-sm ring-1 ring-inset ring-slate-200 dark:ring-white/10 focus:ring-0 sm:text-sm sm:leading-6 transition-all duration-300 placeholder:text-transparent hover:bg-slate-50 dark:hover:bg-white/10" 
                                         />
                                         <label 
+                                            htmlFor="contact-number" 
                                             htmlFor="phone" 
                                             className="absolute left-4 top-1/2 z-10 origin-[0] -translate-y-1/2 scale-100 transform text-sm font-medium text-slate-500 dark:text-slate-400 duration-300 
                                             peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 

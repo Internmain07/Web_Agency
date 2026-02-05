@@ -3,25 +3,42 @@ import * as React from 'react';
 
 const AuroraBackground: React.FC = () => {
   const containerRef = React.useRef<HTMLDivElement>(null);
+  const lastUpdateRef = React.useRef<number>(0);
+  const animationFrameRef = React.useRef<number>();
 
   React.useEffect(() => {
-    let requestRef: number;
-    
     const handleMouseMove = (e: MouseEvent) => {
         if (!containerRef.current) return;
         
-        // Calculate offset (inverse direction for depth/parallax feel)
-        // Move range is approx 40px in each direction
-        const x = (e.clientX / window.innerWidth - 0.5) * 40; 
-        const y = (e.clientY / window.innerHeight - 0.5) * 40;
-        
-        containerRef.current.style.transform = `translate3d(${-x}px, ${-y}px, 0)`;
+        // Throttle updates to 16ms (one frame at 60fps)
+        const now = Date.now();
+        if (now - lastUpdateRef.current < 16) return;
+        lastUpdateRef.current = now;
+
+        // Use requestAnimationFrame to batch DOM updates
+        if (animationFrameRef.current) {
+          cancelAnimationFrame(animationFrameRef.current);
+        }
+
+        animationFrameRef.current = requestAnimationFrame(() => {
+          if (!containerRef.current) return;
+          
+          // Calculate offset (inverse direction for depth/parallax feel)
+          // Move range is approx 40px in each direction
+          const x = (e.clientX / window.innerWidth - 0.5) * 40; 
+          const y = (e.clientY / window.innerHeight - 0.5) * 40;
+          
+          containerRef.current!.style.transform = `translate3d(${-x}px, ${-y}px, 0)`;
+        });
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    // Use passive listener to improve scroll performance
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
     return () => {
         window.removeEventListener('mousemove', handleMouseMove);
-        if (requestRef) cancelAnimationFrame(requestRef);
+        if (animationFrameRef.current) {
+          cancelAnimationFrame(animationFrameRef.current);
+        }
     };
   }, []);
 

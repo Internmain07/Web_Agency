@@ -25,6 +25,8 @@ const techLogos: ReactNodeLogo[] = [
   { node: <SiGithub />, title: "GitHub", href: "https://github.com" },
 ];
 
+// Lazy load meteors only when needed
+const LazyMeteors = React.lazy(() => Promise.resolve({ default: () => <Meteors number={40} /> }));
 
 const HeroSection: React.FC = () => {
     const scrollToContact = (e: React.MouseEvent) => {
@@ -49,7 +51,9 @@ const HeroSection: React.FC = () => {
                     
                     {/* Meteors Effect: Positioned absolutely to act as a background for the heading */}
                     <div className="absolute top-0 left-0 w-full h-[500px] overflow-hidden pointer-events-none z-0">
-                        <Meteors number={40} />
+                        <React.Suspense fallback={null}>
+                            <Meteors number={40} />
+                        </React.Suspense>
                     </div>
 
                     <div className="text-center relative z-10">
@@ -102,11 +106,17 @@ const HeroSection: React.FC = () => {
                             </div>
                         </h1>
                         
+                        <AnimatedInView animationType="scale-in" delay={150} className="mt-4 sm:mt-6">
+                            <h2 className="text-lg sm:text-xl font-semibold text-cyan-600 dark:text-cyan-400 mb-6">
+                                Design Development & Custom Website Services - We Build Your Web Design
+                            </h2>
+                        </AnimatedInView>
+                        
                         <AnimatedInView animationType="scale-in" delay={200}>
                             <p className="mx-auto mt-6 sm:mt-8 max-w-3xl text-base sm:text-lg font-medium leading-relaxed text-slate-600 dark:text-slate-300 transition-colors duration-300 px-2 space-y-1" style={{ textShadow: '0 1px 10px rgba(34, 211, 238, 0.15)' }}>
-                                <div className="text-slate-900 dark:text-white font-semibold">Elite Web Design & Development Services for Businesses</div>
+                                <div className="text-slate-900 dark:text-white font-semibold">We build elite web design & custom website solutions for businesses</div>
                                 <div className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-sky-600 dark:from-cyan-400 dark:to-sky-400 font-semibold">That Refuse to Blend In</div>
-                                <div className="text-slate-600 dark:text-slate-300">Aesthetically stunning, blazing-fast, and built to convert with <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-sky-600 dark:from-cyan-400 dark:to-sky-400 font-semibold">premium craftsmanship</span></div>
+                                <div className="text-slate-600 dark:text-slate-300">Aesthetically stunning design development, blazing-fast, and built to convert with <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-sky-600 dark:from-cyan-400 dark:to-sky-400 font-semibold">premium craftsmanship</span></div>
                             </p>
                         </AnimatedInView>
 

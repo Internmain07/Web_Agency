@@ -139,11 +139,14 @@ const ContactSection: React.FC = () => {
                                             type="tel" 
                                             name="contact-number" 
                                             id="contact-number" 
+                                            name="phone" 
+                                            id="phone" 
                                             placeholder=" "
                                             className="peer block w-full rounded-xl border-0 bg-slate-100/80 dark:bg-white/5 dark:focus:bg-neutral-900/90 pt-7 pb-3 px-4 text-slate-900 dark:text-white shadow-sm ring-1 ring-inset ring-slate-200 dark:ring-white/10 focus:ring-0 sm:text-sm sm:leading-6 transition-all duration-300 placeholder:text-transparent hover:bg-slate-50 dark:hover:bg-white/10" 
                                         />
                                         <label 
                                             htmlFor="contact-number" 
+                                            htmlFor="phone" 
                                             className="absolute left-4 top-1/2 z-10 origin-[0] -translate-y-1/2 scale-100 transform text-sm font-medium text-slate-500 dark:text-slate-400 duration-300 
                                             peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 
                                             peer-focus:top-2.5 peer-focus:-translate-y-0 peer-focus:scale-75 peer-focus:text-cyan-600 dark:peer-focus:text-cyan-400 pointer-events-none 

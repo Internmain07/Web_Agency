@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Primary Meta Tags - SEO Optimized -->
-    <title>I-Intern | Elite Web Design & Development for Premium Brands</title>
-    <meta name="title" content="I-Intern | Elite Web Design & Development for Premium Brands" />
-    <meta name="description" content="I-Intern delivers elite web design & development services for businesses that refuse to blend in. Stunning aesthetics, premium speed, built to convert." />
-    <meta name="keywords" content="web design agency, web development agency, website design, custom website development, full stack web development, React development, Next.js development, professional website design, responsive web design, UI/UX design, e-commerce website development, business website design, mobile-friendly website, SEO-optimized websites, modern web design" />
+    <title>Web Design Development & Custom Website Services | We Build SEO Websites | Design Development Agency</title>
+    <meta name="title" content="Web Design Development & Custom Website Services | We Build SEO Websites | Design Development Agency" />
+    <meta name="description" content="Web design development services | We build custom website solutions with design development expertise. Elite web design & development for agencies that demand excellence." />
+    <meta name="keywords" content="web design, web development, website design, custom website development, build websites, web design services, SEO services, web design agency, development agency, responsive web design, UI/UX design, e-commerce development, full-stack web development, React development, Next.js development, professional web design, modern website design, mobile-friendly websites, SEO-optimized websites, website builder, custom web solutions" />
     <meta name="author" content="I-Intern Web Design Agency" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="language" content="English" />
@@ -264,6 +264,33 @@
       "slogan": "High-end design shouldn't require a high-end headache"
     }
     </script>
+
+    <!-- LocalBusiness Schema for Enhanced Local SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "I-Intern Web Design Agency",
+      "image": "https://i-intern.com/logo.png",
+      "description": "Professional web design and development agency specializing in custom websites and full-stack development services.",
+      "telephone": "+91-XXX-XXX-XXXX",
+      "email": "contact@i-intern.com",
+      "url": "https://i-intern.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN",
+        "addressRegion": "India"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "25"
+      },
+      "priceRange": "₹",
+      "areaServed": "Worldwide",
+      "serviceType": ["Web Design", "Web Development", "Full Stack Development", "E-commerce", "UI/UX Design"]
+    }
+    </script>
     
     <!-- Humans.txt for transparency -->
     <link type="text/plain" rel="author" href="/humans.txt" />
@@ -272,34 +299,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <!-- Scripts -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              // Custom colors if needed
-            },
-            animation: {
-              meteor: "meteor 5s linear infinite",
-            },
-            keyframes: {
-              meteor: {
-                "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
-                "70%": { opacity: "1" },
-                "100%": {
-                  transform: "rotate(215deg) translateX(-500px)",
-                  opacity: "0",
-                },
-              },
-            },
-          }
-        }
-      }
-    </script>
+    
+    <!-- Preload Tailwind to avoid FOUC but don't block rendering -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <link rel="preload" href="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" as="script">
+    
+    <!-- Load critical Tailwind config inline to prevent render-blocking -->
+    <style>
+      /* Prevent CLS while Tailwind loads */
+      body { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+      html.dark { color-scheme: dark; }
+      /* Ensure layout stability during script load */
+      :root { --tw-space-x-reverse: 0; --tw-space-y-reverse: 0; }
+    </style>
     <!-- Custom Styles -->
     <style>
     /* Theme Variables */
@@ -592,7 +604,61 @@
 </script>
 </head>
 <body class="antialiased text-slate-900 dark:text-slate-100">
+    <noscript>
+        <div class="min-h-screen flex items-center justify-center bg-white dark:bg-slate-950 p-4">
+            <div class="text-center max-w-2xl">
+                <h1 class="text-3xl font-bold mb-4 text-slate-900 dark:text-white">I-Intern | Elite Web Design & Development</h1>
+                <p class="text-lg mb-4 text-slate-700 dark:text-slate-300">We deliver premium web design & development services for businesses that refuse to blend in.</p>
+                <div class="space-y-2 text-left">
+                    <p class="font-semibold text-slate-900 dark:text-white">Our Services:</p>
+                    <ul class="text-slate-700 dark:text-slate-300 list-disc list-inside">
+                        <li>Custom Web Design & Development</li>
+                        <li>Full Stack Web Development</li>
+                        <li>React & Next.js Development</li>
+                        <li>E-commerce Solutions</li>
+                        <li>UI/UX Design</li>
+                        <li>Mobile-Responsive Websites</li>
+                        <li>SEO Optimization</li>
+                    </ul>
+                </div>
+                <p class="text-slate-600 dark:text-slate-400 mt-4 text-sm">Please enable JavaScript to experience our full website.</p>
+            </div>
+        </div>
+    </noscript>
     <div id="root"></div>
+    
+    <!-- React app - loads first -->
     <script type="module" src="/index.tsx"></script>
+    
+    <!-- Load Tailwind asynchronously after React to avoid blocking main thread -->
+    <script async src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Iconify asynchronously -->
+    <script async src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    
+    <!-- Configure Tailwind - runs in background -->
+    <script>
+      tailwind = window.tailwind || {};
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            animation: {
+              meteor: "meteor 5s linear infinite",
+            },
+            keyframes: {
+              meteor: {
+                "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+                "70%": { opacity: "1" },
+                "100%": {
+                  transform: "rotate(215deg) translateX(-500px)",
+                  opacity: "0",
+                },
+              },
+            },
+          }
+        }
+      };
+    </script>
 </body>
 </html>

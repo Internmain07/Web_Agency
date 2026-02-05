@@ -39,6 +39,15 @@ const ContactSection: React.FC = () => {
                                     <p className="text-sm">9:00 AM - 6:00 PM (IST)</p>
                                 </div>
                             </div>
+                            <div className="flex items-start gap-4 group">
+                                <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-emerald-100/50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform duration-300 ring-1 ring-emerald-500/20">
+                                    <iconify-icon icon="solar:phone-linear" className="text-xl"></iconify-icon>
+                                </div>
+                                <div>
+                                    <h3 className="font-semibold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Phone</h3>
+                                    <p className="text-sm mt-0.5">+91 93456 96576</p>
+                                </div>
+                            </div>
                         </div>
                     </AnimatedInView>
 

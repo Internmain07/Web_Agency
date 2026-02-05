@@ -5,6 +5,7 @@ import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import FullStackSection from './components/FullStackSection';
 import ProcessSection from './components/ProcessSection';
+import ImpactSection from './components/ImpactSection';
 import ContactSection from './components/ContactSection';
 import FAQSection from './components/FAQSection';
 import Footer from './components/Footer';
@@ -26,6 +27,7 @@ const HomePage = () => (
       <HeroSection />
       <FullStackSection />
       <ProcessSection />
+      <ImpactSection />
       <ContactSection />
       <FAQSection />
       <Footer />

@@ -21,8 +21,8 @@ const Header: React.FC<HeaderProps> = ({ isPrivacyPage = false }) => {
         }
 
         const handleScroll = () => {
-            const sections = ['services', 'process', 'contact'];
-            const scrollPosition = window.scrollY + 150; 
+            const sections = ['services', 'process', 'impact', 'contact'];
+            const scrollPosition = window.scrollY + 200; 
 
             let current = '';
             
@@ -53,6 +53,7 @@ const Header: React.FC<HeaderProps> = ({ isPrivacyPage = false }) => {
     const navItems = [
       { label: "Services", href: isPrivacyPage ? "/#services" : "#services", id: "services" },
       { label: "Process", href: isPrivacyPage ? "/#process" : "#process", id: "process" },
+      { label: "Impact", href: isPrivacyPage ? "/#impact" : "#impact", id: "impact" },
       { label: "Contact", href: isPrivacyPage ? "/#contact" : "#contact", id: "contact" },
     ];
 

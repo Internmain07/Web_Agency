@@ -8,10 +8,7 @@
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=()
-  
-  # CORS if needed
-  # Access-Control-Allow-Origin: *
-  
+
   # Cache Control
   Cache-Control: public, max-age=0, must-revalidate
 
@@ -55,12 +52,3 @@
 
 /robots.txt
   Cache-Control: public, max-age=3600
-
-# Force HTTPS redirect
-http://*
-  X-Forwarded-Proto: https
-
-# SPA fallback for React Router
-/*
-  X-Frame-Options: SAMEORIGIN
-  X-Content-Type-Options: nosniff

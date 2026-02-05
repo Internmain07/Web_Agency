@@ -11,7 +11,6 @@ import Footer from './components/Footer';
 import AuroraBackground from './components/AuroraBackground';
 import ClickSpark from './components/ClickSpark';
 import ScrollToTop from './components/ScrollToTop';
-import ScrollProgress from './components/ScrollProgress';
 import { ThemeProvider } from './context/ThemeContext';
 import AboutPage from './components/AboutPage';
 import ResourcesPage from './components/ResourcesPage';
@@ -50,7 +49,6 @@ function App() {
     <ThemeProvider>
       <BrowserRouter>
         <ScrollToTop />
-        <ScrollProgress />
         <ClickSpark
           sparkColor='#fff'
           sparkSize={10}

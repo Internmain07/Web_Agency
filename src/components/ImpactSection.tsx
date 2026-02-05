@@ -22,7 +22,12 @@ const highlightStats = (text: string, variant: 'cyan' | 'blue') => {
   );
 };
 
-const directImpact = [
+type ImpactItem = {
+  title: string;
+  description: string | React.ReactNode;
+};
+
+const directImpact: ImpactItem[] = [
   {
     title: 'Conversion Rate Optimization (CRO)',
     description:
@@ -30,17 +35,31 @@ const directImpact = [
   },
   {
     title: 'Average Order Value (AOV) Boost',
-    description:
-      'Our intelligent UX patterns and upsell integrations (like WhatsApp and UPI) reduce friction, leading to higher transaction values.',
+    description: (
+      <>
+        Our intelligent{' '}
+        <span className="font-semibold text-cyan-700 dark:text-cyan-200 bg-cyan-500/10 px-1.5 py-0.5 rounded">
+          UX patterns
+        </span>{' '}
+        and upsell integrations (like WhatsApp and UPI) reduce friction, leading to higher transaction values.
+      </>
+    ),
   },
   {
     title: 'Reduced Customer Acquisition Cost (CAC)',
-    description:
-      'High-speed, SEO-optimized pages lower your ad bounce rates, making every rupee spent on marketing go further.',
+    description: (
+      <>
+        High-speed{' '}
+        <span className="font-semibold text-cyan-700 dark:text-cyan-200 bg-cyan-500/10 px-1.5 py-0.5 rounded">
+          SEO-optimized
+        </span>{' '}
+        pages lower your ad bounce rates, making every rupee spent on marketing go further.
+      </>
+    ),
   },
 ];
 
-const operationalImpact = [
+const operationalImpact: ImpactItem[] = [
   {
     title: 'Scalability Assurance',
     description:
@@ -53,8 +72,15 @@ const operationalImpact = [
   },
   {
     title: 'Brand Authority',
-    description:
-      'Establish global authority with high-performance digital assets that command trust from Tier-1 partners',
+    description: (
+      <>
+        Establish global authority with high-performance digital assets that command trust from{' '}
+        <span className="font-semibold text-blue-700 dark:text-blue-200 bg-blue-500/10 px-1.5 py-0.5 rounded">
+          Tier-1
+        </span>{' '}
+        partners.
+      </>
+    ),
   },
 ];
 
@@ -93,7 +119,9 @@ const ImpactSection: React.FC = () => {
                       <div>
                         <p className="text-base font-semibold text-slate-900 dark:text-white">{item.title}</p>
                         <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
-                          {highlightStats(item.description, 'cyan')}
+                          {typeof item.description === 'string'
+                            ? highlightStats(item.description, 'cyan')
+                            : item.description}
                         </p>
                       </div>
                     </div>
@@ -123,7 +151,9 @@ const ImpactSection: React.FC = () => {
                       <div>
                         <p className="text-base font-semibold text-slate-900 dark:text-white">{item.title}</p>
                         <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
-                          {highlightStats(item.description, 'blue')}
+                          {typeof item.description === 'string'
+                            ? highlightStats(item.description, 'blue')
+                            : item.description}
                         </p>
                       </div>
                     </div>

@@ -92,10 +92,10 @@ const ImpactSection: React.FC = () => {
       <AnimatedInView className="text-center" delay={100}>
         <h2 className="text-4xl font-medium tracking-tight text-slate-900 dark:text-white sm:text-5xl md:text-6xl">
           Scaling Your Bottom Line Through{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-600">Engineering Excellence</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-600">Custom-Built Websites</span>
         </h2>
         <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-600 dark:text-slate-300">
-          We don't just launch websites; we deploy revenue-generating assets that pay for themselves.
+          We don't just launch websites; we deploy SEO-optimized, revenue-generating assets that pay for themselves. Our web design and development strategy drives measurable business results.
         </p>
       </AnimatedInView>
 

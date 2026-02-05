@@ -106,6 +106,12 @@ const HeroSection: React.FC = () => {
                             </div>
                         </h1>
                         
+                        <AnimatedInView animationType="scale-in" delay={150} className="mt-4 sm:mt-6">
+                            <h2 className="text-lg sm:text-xl font-semibold text-cyan-600 dark:text-cyan-400 mb-6">
+                                Custom Web Design & Development Services to Build Your Dream Website
+                            </h2>
+                        </AnimatedInView>
+                        
                         <AnimatedInView animationType="scale-in" delay={200}>
                             <p className="mx-auto mt-6 sm:mt-8 max-w-3xl text-base sm:text-lg font-medium leading-relaxed text-slate-600 dark:text-slate-300 transition-colors duration-300 px-2 space-y-1" style={{ textShadow: '0 1px 10px rgba(34, 211, 238, 0.15)' }}>
                                 <div className="text-slate-900 dark:text-white font-semibold">Elite Web Design & Development Services for Businesses</div>

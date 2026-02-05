@@ -84,10 +84,10 @@ const FAQSection: React.FC = () => {
                     <div className="lg:col-span-5">
                         <div className="sticky top-24">
                             <h2 className="text-3xl font-medium tracking-tight text-slate-900 dark:text-white sm:text-4xl transition-colors">
-                                Frequently Asked Questions
+                                Web Design & Development<br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 dark:from-cyan-400 to-blue-600 dark:to-blue-400">FAQ</span>
                             </h2>
                             <p className="mt-4 text-base leading-relaxed text-slate-600 dark:text-zinc-400 transition-colors">
-                                Everything you need to know about our process and how we work. Can't find the answer you're looking for? 
+                                Everything you need to know about our custom website design, development services, and SEO solutions. Can't find the answer you're looking for?
                             </p>
                             <a href="#contact" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors">
                                 Chat to our team

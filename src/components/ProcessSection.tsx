@@ -75,10 +75,10 @@ const ProcessSection: React.FC = () => {
 
             <AnimatedInView className="mb-24 text-center md:mb-32 relative z-10" delay={100}>
                 <h2 className="text-4xl font-medium tracking-tight text-slate-900 dark:text-white sm:text-5xl md:text-6xl transition-colors">
-                    Deployment <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-600">Lifecycle</span>
+                    Our Web Development & Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-600">Build Process</span>
                 </h2>
                 <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-300 transition-colors">
-                    We don't just build websites; we engineer market leaders. Our four-stage framework ensures your vision is validated, designed, and deployed for maximum impact.
+                    We don't just build websites; we engineer market leaders. Our four-stage web design and development framework ensures your vision is validated, designed, and deployed for maximum impact.
                 </p>
             </AnimatedInView>
 

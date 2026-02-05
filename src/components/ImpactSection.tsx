@@ -2,6 +2,26 @@ import '../types';
 import React from 'react';
 import AnimatedInView from './AnimatedInView';
 
+const statRegex = /(?<![A-Za-z-])(\d+(?:,\d{3})*(?:\.\d+)?(?:%|x)?)(?![A-Za-z])/g;
+const statToken = /^\d+(?:,\d{3})*(?:\.\d+)?(?:%|x)?$/;
+
+const highlightStats = (text: string, variant: 'cyan' | 'blue') => {
+  const statClasses =
+    variant === 'cyan'
+      ? 'font-semibold text-cyan-700 dark:text-cyan-200 bg-cyan-500/10 px-1.5 py-0.5 rounded'
+      : 'font-semibold text-blue-700 dark:text-blue-200 bg-blue-500/10 px-1.5 py-0.5 rounded';
+
+  return text.split(statRegex).map((part, index) =>
+    statToken.test(part) ? (
+      <span key={`${part}-${index}`} className={statClasses}>
+        {part}
+      </span>
+    ) : (
+      <React.Fragment key={`${part}-${index}`}>{part}</React.Fragment>
+    )
+  );
+};
+
 const directImpact = [
   {
     title: 'Conversion Rate Optimization (CRO)',
@@ -72,7 +92,9 @@ const ImpactSection: React.FC = () => {
                       </span>
                       <div>
                         <p className="text-base font-semibold text-slate-900 dark:text-white">{item.title}</p>
-                        <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">{item.description}</p>
+                        <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                          {highlightStats(item.description, 'cyan')}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -100,7 +122,9 @@ const ImpactSection: React.FC = () => {
                       </span>
                       <div>
                         <p className="text-base font-semibold text-slate-900 dark:text-white">{item.title}</p>
-                        <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">{item.description}</p>
+                        <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                          {highlightStats(item.description, 'blue')}
+                        </p>
                       </div>
                     </div>
                   </div>
